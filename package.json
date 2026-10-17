@@ -1,7 +1,7 @@
 {
   "name": "dsh-usage-dashboard",
   "version": "1.0.0",
-  "description": "Token usage, cost estimation, API balance, usage trends and model share — a desktop dashboard for DeepSeek Harness, rendered as a first-class main panel.",
+  "description": "Token usage, cost estimation, API balance, usage trends and model share 鈥?a desktop dashboard for DeepSeek Harness, rendered as a first-class main panel.",
   "type": "module",
   "exports": {
     ".": "./index.js",
@@ -50,11 +50,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rtA/dsh-usage-dashboard.git"
+    "url": "git+https://github.com/JeffKeeping/dsh-usage-dashboard.git"
   },
-  "homepage": "https://github.com/rtA/dsh-usage-dashboard#readme",
+  "homepage": "https://github.com/JeffKeeping/dsh-usage-dashboard#readme",
   "bugs": {
-    "url": "https://github.com/rtA/dsh-usage-dashboard/issues"
+    "url": "https://github.com/JeffKeeping/dsh-usage-dashboard/issues"
   },
   "engines": {
     "node": ">=20"
