@@ -1,0 +1,9 @@
+{
+  "meta": {
+    "title": "Usage Dashboard",
+    "description": "A desktop usage board for DeepSeek Harness: token totals split into input, output, and cache hits, estimated cost for today and all history, API balance, a daily trend with a 182-day activity heatmap, and per-model share."
+  },
+  "panel": {
+    "title": "Usage Board"
+  }
+}

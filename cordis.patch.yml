@@ -1,0 +1,25 @@
+# dsh-usage-dashboard bundle patch.
+#
+# Inserts one Host row that owns the read-only JSON routes the panel calls:
+#   GET /dsh-usage-dashboard/snapshot[?refresh=1]
+#
+# `config.pricing` is the estimation table, in `unit` tokens per price. It is a
+# starting point, not a billing statement: edit the numbers to match the plan
+# you actually pay for. `models` keys match a model id exactly first and then by
+# longest prefix, so `deepseek-v4-pro` also covers `deepseek-v4-pro-2026`.
+- insert:
+    - id: dsh-usage-dashboard
+      name: dsh-usage-dashboard
+      config:
+        historyDays: 182
+        maxSessions: 600
+        pricing:
+          currency: CNY
+          unit: 1000000
+          default: { miss: 2, hit: 0.2, write: 2, output: 3 }
+          models:
+            deepseek-flash: { miss: 2, hit: 0.2, write: 2, output: 3 }
+            deepseek-v4.1-flash: { miss: 2, hit: 0.2, write: 2, output: 3 }
+            deepseek-v4-pro: { miss: 4, hit: 1, write: 4, output: 12 }
+            deepseek-chat: { miss: 2, hit: 0.2, write: 2, output: 3 }
+            deepseek-reasoner: { miss: 4, hit: 1, write: 4, output: 16 }

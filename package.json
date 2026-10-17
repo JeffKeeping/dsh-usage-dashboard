@@ -1,0 +1,62 @@
+{
+  "name": "dsh-usage-dashboard",
+  "version": "1.0.0",
+  "description": "Token usage, cost estimation, API balance, usage trends and model share — a desktop dashboard for DeepSeek Harness, rendered as a first-class main panel.",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "docs/screenshot.png",
+    "README.md",
+    "README.en.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "icon": "./icon.svg",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dsh-bundle",
+    "deepseek-harness",
+    "dashboard",
+    "token-usage",
+    "cost-tracking"
+  ],
+  "author": "rtA",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rtA/dsh-usage-dashboard.git"
+  },
+  "homepage": "https://github.com/rtA/dsh-usage-dashboard#readme",
+  "bugs": {
+    "url": "https://github.com/rtA/dsh-usage-dashboard/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
